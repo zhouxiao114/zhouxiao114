@@ -1,0 +1,14 @@
+
+#include<iostream>
+using namespace std;
+class Sequence
+{
+public:
+	Sequence()
+	{
+		//
+		_a = (int*)malloc(4 * sizeof(int));
+		_size = 0;
+		_capcity = 4;
+	}
+	void Push(int x)
