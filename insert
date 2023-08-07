@@ -1,0 +1,7 @@
+create table student2(class_id int,id int,name varchar(20),
+					gender varchar(10),
+					chinese decimal(3,1),math decimal(3,1),
+					english decimal(3,1));
+
+insert into student2 select * from student;
+select * from student2;
