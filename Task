@@ -1,0 +1,20 @@
+        public Task StartAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("start service");
+            _timer = new Timer(Refresh, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
+            return Task.CompletedTask;
+        }
+
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("stop service");
+            return Task.CompletedTask;
+        }
+
+
+        public void Refresh(object state)
+        {
+            _logger.LogInformation(DateTime.Now.ToString() + "测试定时任务");
+        }
+    }
+}
