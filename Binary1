@@ -1,0 +1,22 @@
+
+void postorder(struct TreeNode root, int a, int pi)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    postorder(root->left, a, pi);
+    postorder(root->right, a, pi);
+    a[pi] = root->val;
+    (pi)++;
+}
+ 
+int* postorderTraversal(struct TreeNode* root, int returnSize)
+{
+    int size = BinaryTreeSize(root);
+   *returnSize = size;
+   int* a = (int)malloc(sizeof(int)  size);
+   int i = 0;
+   postorder(root, a, &i);
+   return a;
+}
