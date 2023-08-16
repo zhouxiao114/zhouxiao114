@@ -1,0 +1,14 @@
+import java.util.concurrent.*;
+public class threadTest{
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        //thread
+        ThreadClass thread = new ThreadClass();
+        thread.start();
+        Thread.sleep(100);
+        System.out.println("#####################");
+ 
+        //runnable
+        RunnableClass runnable = new RunnableClass();
+        new Thread(runnable).start();
+        Thread.sleep(100);
+        System.out.println("#####################");
