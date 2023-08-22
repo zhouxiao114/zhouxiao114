@@ -1,0 +1,17 @@
+#include "finddialog.h"
+#include <string>
+ 
+using namespace std;
+ 
+string my_title
+ 
+Finddialog::Finddialog(QWidget *parent)
+    : QDialog(parent)
+{
+ 
+    ui->setupUi(this);
+ 
+    setWindowTitle(my_title);
+    resize(1080, 720);
+ 
+}；
